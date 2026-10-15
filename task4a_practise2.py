@@ -58,11 +58,11 @@ def trend_menu():
         print("Which conversion would you like to make today?")
         print("1. trends and patterns for the value of the pound (GBP) compared to other currencies")
         print("2. trends and patterns for the performance (e.g. increase/decrease in value) of a selected currency")
-        print("3. Pound (GBP) to Australian Dollars (AUD)")
+        print("3. selected day of how a currency performed (e.g. increase/decrease in value) on it")
         
 
         
-        trend_choice = input("Please enter the number of your choice (1-7): ")
+        trend_choice = input("Please enter the number of your choice (1-3): ")
 
         try:
             int(trend_choice)
@@ -89,8 +89,6 @@ elif int(menu_choice) == 7:
 
 
 if trend_choice == 1:
-    # Read the CSV file
-    df = pd.read_csv("Task4a_RBSX_data.csv")
 
      # Convert the Date column into datetime format
     df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)

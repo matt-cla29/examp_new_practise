@@ -89,8 +89,6 @@ elif int(menu_choice) == 7:
     print(df)
         
 if trend_choice == 1:
-    # Read the CSV file
-    df = pd.read_csv("Task4a_RBSX_data.csv")
 
     # Convert the Date column into datetime format
     df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
