@@ -58,7 +58,7 @@ def trends_menu():
         print("Which conversion would you like to make today?")
         print("1. trends and patterns over time for  the value of the pound (GBP) compared to other currencies")
         print("2. trends and patterns over time for the performance (e.g. increase/decrease in value) of a selected currency")
-        print("3. selected day of how a currency performed (e.g. increase/decrease in value) on it")
+        print("3. trends and patterns for selected day of how a currency performed (e.g. increase/decrease in value) on it")
         print("######################################################")
 
         
