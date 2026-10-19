@@ -92,10 +92,18 @@ elif int(menu_choice) == 7:
 
     #creates four graphs
     fig, axes = plt.subplots(2, 2, figsize = (12, 8))
-    plt.show()
+
 if trends_choice == 1:
     #convert the date to datetime format
     df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
+
+    #sort the data by dates
+    df = df.sort_values("Date")
+
+    # GBP compared to EUR
+    axes[0, 0].plot(df["Date"], df["GBP - EUR"])
+    axes[0, 0].set_title["GBP compared to EUR"]
+    axes[0, 0].set_ylabel["Euro per pound"]
     plt.show()
 elif trends_choice == 2:
     print("choice selected")
