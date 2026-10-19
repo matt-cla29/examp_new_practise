@@ -87,8 +87,16 @@ elif int(menu_choice) == 7:
     # reads the CSV files
     df = pd.read_csv("Task4a_RBSX_data.csv")
 
+    #sort the data by dates
+    df = df.sort_values("Date")
+
+    #creates four graphs
+    fig, axes = plt.subplots(2, 2, figsize = (12, 8))
+    plt.show()
 if trends_choice == 1:
-    print("choice selected")
+    #convert the date to datetime format
+    df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
+    plt.show()
 elif trends_choice == 2:
     print("choice selected")
 elif trends_choice == 3:
